@@ -38,3 +38,44 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+
+/* ── Header fijo ── */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-primary);
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+.header-inner {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.8rem 0;
+  display: flex; /* se retomará en profundidad en Post-Contenido
+2 */
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.main-nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+.main-nav a:hover {
+  opacity: 0.75;
+}
+/* Compensar header fijo: el contenido no queda tapado */
+main {
+  padding-top: 70px;
+}
